@@ -1,42 +1,44 @@
-# HeyDrew - Add Admin Dashboard to Existing Repo
+# HeyDrew
 
-## Task for Claude Code
+A conversational tax strategy assistant prototype for small business owners.
 
-Add the admin dashboard to the existing hey-drew repo. Both files are ready to go with working cross-links.
+## Overview
 
-## Repo
-https://github.com/calvinlocklear1205/hey-drew
+HeyDrew helps small business owners discover tax-saving strategies through a friendly, conversational interface. Instead of immediately asking for documents, Drew learns about your business first to provide personalized recommendations.
 
-## Files to Add/Replace
+## Features
 
-1. **`index.html`** - Updated client app with "View Admin →" link in the bottom bar
-2. **`admin.html`** - New admin dashboard with "View Client App →" link in sidebar
+**Client App (`index.html`)**
+- Conversational onboarding flow that asks about your business type
+- Discovers opportunities like the Augusta Rule for home-based businesses
+- Document upload and analysis
+- Tax strategy recommendations
+- Secure messaging with tax professionals
 
-## Commands
+**Admin Dashboard (`admin.html`)**
+- Case management queue
+- Client document review
+- Strategy recommendations workflow
+- Team collaboration tools
 
-```bash
-# Clone the repo
-git clone https://github.com/calvinlocklear1205/hey-drew.git
-cd hey-drew
+## Live Demo
 
-# Copy the two files (index.html and admin.html) into the repo root
-# They should replace/add to the existing files
+- **Client App**: https://calvinlocklear1205.github.io/hey-drew/
+- **Admin Dashboard**: https://calvinlocklear1205.github.io/hey-drew/admin.html
 
-# Commit and push
-git add .
-git commit -m "Add admin dashboard and cross-links"
-git push
+## Local Development
+
+Simply open `index.html` in a browser - no build process required.
+
+## Files
+
+```
+hey-drew/
+├── index.html    # Main client application
+├── admin.html    # Admin dashboard
+└── README.md     # This file
 ```
 
-## Result
+## Deployment
 
-After deployment:
-- **https://hey-drew.vercel.app** → Client app (with "View Admin →" button)
-- **https://hey-drew.vercel.app/admin.html** → Admin dashboard (with "View Client App →" button)
-
-## Links Already Configured
-
-- Client → Admin: `./admin.html`
-- Admin → Client: `./index.html`
-
-No URL changes needed - relative paths work automatically!
+The app is deployed via GitHub Pages. Any push to the main branch automatically updates the live site.
