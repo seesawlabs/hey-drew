@@ -672,11 +672,28 @@
     /* ==================== */
     #signup-screen {
       background: linear-gradient(180deg, var(--teal-light) 0%, var(--white) 30%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .signup-screen-content {
+      max-width: 480px;
+      width: 100%;
+      padding: 40px;
+    }
+
+    .signup-back-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
     }
 
     .signup-header {
       text-align: center;
-      padding: 20px 24px 30px;
+      padding: 0 0 30px;
     }
 
     .success-checkmark {
@@ -719,7 +736,8 @@
     }
 
     .signup-form {
-      padding: 0 24px;
+      padding: 0;
+      text-align: left;
     }
 
     .password-requirements {
@@ -776,7 +794,7 @@
     }
 
     .signup-actions {
-      padding: 24px;
+      padding: 24px 0 0;
     }
 
     /* ==================== */
@@ -5273,61 +5291,63 @@
 
       <!-- SIGNUP SCREEN -->
       <div id="signup-screen" class="page">
-        <div class="page-header">
-          <button class="back-btn" onclick="showScreen('token-screen')">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <h1 class="page-title">Create Account</h1>
-        </div>
-
-        <div class="signup-header">
-          <div class="success-checkmark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-          </div>
-          <h2 class="signup-title">Token Verified!</h2>
-          <p class="signup-subtitle">Now let's secure your account</p>
-        </div>
-
-        <div class="signup-form">
-          <div class="input-group">
-            <label class="input-label">Create Password</label>
-            <input type="password" class="input-field" placeholder="Enter password" id="signup-password">
+        <div class="signup-screen-content">
+          <div class="signup-back-header">
+            <button class="back-btn" onclick="showScreen('token-screen')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <h1 class="page-title">Create Account</h1>
           </div>
 
-          <div class="input-group">
-            <label class="input-label">Confirm Password</label>
-            <input type="password" class="input-field" placeholder="Confirm password" id="signup-confirm">
-          </div>
-
-          <div class="password-requirements">
-            <p>Password must have:</p>
-            <div class="requirement" id="req-length">
-              <div class="requirement-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
-              </div>
-              <span>At least 8 characters</span>
+          <div class="signup-header">
+            <div class="success-checkmark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
             </div>
-            <div class="requirement" id="req-upper">
-              <div class="requirement-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
-              </div>
-              <span>One uppercase letter</span>
+            <h2 class="signup-title">Token Verified!</h2>
+            <p class="signup-subtitle">Now let's secure your account</p>
+          </div>
+
+          <div class="signup-form">
+            <div class="input-group">
+              <label class="input-label">Create Password</label>
+              <input type="password" class="input-field" placeholder="Enter password" id="signup-password">
             </div>
-            <div class="requirement" id="req-number">
-              <div class="requirement-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+
+            <div class="input-group">
+              <label class="input-label">Confirm Password</label>
+              <input type="password" class="input-field" placeholder="Confirm password" id="signup-confirm">
+            </div>
+
+            <div class="password-requirements">
+              <p>Password must have:</p>
+              <div class="requirement" id="req-length">
+                <div class="requirement-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span>At least 8 characters</span>
               </div>
-              <span>One number</span>
+              <div class="requirement" id="req-upper">
+                <div class="requirement-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span>One uppercase letter</span>
+              </div>
+              <div class="requirement" id="req-number">
+                <div class="requirement-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span>One number</span>
+              </div>
+            </div>
+
+            <div class="signup-actions">
+              <button class="btn-primary" id="create-account-btn">Create My Account</button>
             </div>
           </div>
-        </div>
-
-        <div class="signup-actions">
-          <button class="btn-primary" id="create-account-btn">Create My Account</button>
         </div>
       </div>
 
